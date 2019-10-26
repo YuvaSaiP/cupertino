@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'dart:async';
 
 class Login extends StatefulWidget {
   @override
@@ -31,7 +32,7 @@ class _LoginState extends State<Login> {
           .signInWithEmailAndPassword(email: _email, password: _password)
           .then((user) {
         print('Signed in as ${user.uid}');
-        Navigator.of(context).pushReplacementNamed('/home');
+        Navigator.of(context).pushReplacementNamed('/home'); //navigating user to homepage
       }).catchError((e) {
         print(e);
       });
@@ -43,7 +44,7 @@ class _LoginState extends State<Login> {
     return new Scaffold(
       body: Center(
         child: ListView(
-          shrinkWrap: true,
+          shrinkWrap: false,
           children: <Widget>[
             new Container(
               padding: EdgeInsets.all(25.0),
