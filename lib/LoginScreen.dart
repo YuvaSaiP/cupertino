@@ -60,7 +60,7 @@ class _LoginState extends State<Login> {
                     SizedBox(height: 29.0),
                     new TextFormField(
                       decoration: InputDecoration(
-                        hintText: 'Email',
+                        hintText: 'Email here',
                         prefixIcon: Icon(Icons.mail),
                         contentPadding:
                             EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
@@ -116,18 +116,18 @@ class _LoginState extends State<Login> {
                     new Padding(
                       padding: EdgeInsets.symmetric(vertical: 15.0),
                       child: Material(
-                        borderRadius: BorderRadius.circular(20.0),
+                        borderRadius: BorderRadius.circular(21.0),
                         shadowColor: Colors.black,
                         elevation: 8.0,
                         child: MaterialButton(
-                          minWidth: 500.0,
+                          minWidth: 400.0,
                           height: 40.0,
                           onPressed: () {
                             
                           },
                           color: Colors.lightGreen,
                           child: Text(
-                            'Signup',
+                            'Lets get in',
                             style: new TextStyle(color: Colors.white),
                           ),
                      ),
